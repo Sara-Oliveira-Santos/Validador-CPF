@@ -1,0 +1,31 @@
+body{
+    background: pink;   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+input{
+    background: rgb(252, 220, 225);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor:text;
+    margin: 10px;
+}
+button{
+    background: rgb(224, 58, 86);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor:pointer;
+}
+button {
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #ff006a; /* Green */
+  color: white;
+}
