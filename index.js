@@ -1,7 +1,9 @@
 const cpfInput = document.getElementById('cpf');
+const resultado = document.getElementById('resultado');
 
 function validador() {
     let cpf = obterCpfValido();
+    if (!cpf) return;
     let cpfArray = cpf.split('').map(Number);
 
     let pDigito = calcularPrimeiroDigito(cpfArray);
@@ -13,11 +15,11 @@ function validador() {
 function obterCpfValido() {
     let cpf = cpfInput.value.trim();
 
-    while (cpf.length !== 11 || isNaN(cpf)) {
-        alert("O CPF precisa ter apenas números e exatamente 11 dígitos.");
-//        cpf = prompt("CPF (Apenas números):").trim();
+    if (cpf.length !== 11 || isNaN(cpf)) {
+        resultado.innerText = "O CPF precisa ter apenas números e exatamente 11 dígitos.";
+        resultado.className = "aviso"; 
+        return null;
     }
-    
     return cpf;
 }
 
@@ -53,8 +55,10 @@ function calcularSegundoDigito(cpfArray) {
 
 function exibirResultado(cpfArray, pDigito, sDigito) {
     if (cpfArray[9] === pDigito && cpfArray[10] === sDigito) {
-        alert("CPF VÁLIDO");
+        resultado.innerText = "CPF VÁLIDO";
+        resultado.className = "valido"; 
     } else {
-        alert("CPF INVÁLIDO");
+        resultado.innerText = "CPF INVÁLIDO";
+        resultado.className = "invalido"; 
     }
 }

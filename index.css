@@ -1,31 +1,47 @@
 body{
-    background: pink;   
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background: pink;   
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 input{
-    background: rgb(252, 220, 225);
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    cursor:text;
-    margin: 10px;
+  background: rgb(252, 220, 225);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor:text;
+  margin: 10px;
 }
 button{
-    background: rgb(224, 58, 86);
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    cursor:pointer;
+  background: rgb(224, 58, 86);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor:pointer;
 }
 button {
   transition-duration: 0.4s;
 }
 button:hover {
-  background-color: #ff006a; /* Green */
+  background-color:rgba(209, 34, 34, 0.856);
   color: white;
+}
+#resultado {
+  background-color: rgba(255, 95, 95, 0.267);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.valido { 
+  color: rgb(0, 94, 0);
+}
+.invalido {
+  color: rgb(104, 0, 0);
+}
+.aviso {
+  color: rgb(0, 0, 0);
 }
