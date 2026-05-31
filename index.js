@@ -13,13 +13,29 @@ function validador() {
 }
 
 function obterCpfValido() {
-    let cpf = cpfInput.value.trim();
+    let cpf = cpfInput.value.trim(); 
+    cpf = cpf.replace(/\D/g, "");
 
-    if (cpf.length !== 11 || isNaN(cpf)) {
-        resultado.innerText = "O CPF precisa ter apenas números e exatamente 11 dígitos.";
+    if (cpf === ''){
+        resultado.innerText = "Sem números para validar.";
+        resultado.className = "aviso";
+        return null;    
+    }
+    // if(isNaN(cpf)){
+    //     resultado.innerText = "Apenas números.";
+    //     resultado.className = "aviso"; 
+    //     return null;
+    // }
+    if(cpf.length !== 11){
+        resultado.innerText = "O CPF precisa ter 11 digítos";
         resultado.className = "aviso"; 
         return null;
     }
+    // if (cpf.length !== 11 || isNaN(cpf)) {
+    //     resultado.innerText = "O CPF precisa ter apenas números \n e exatamente 11 dígitos.";
+    //     resultado.className = "aviso"; 
+    //     return null;
+    // }
     return cpf;
 }
 

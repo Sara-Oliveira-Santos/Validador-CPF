@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div>
-        <h1>VALIDADOR DE CPF</h1>
+    <div id="validador-cpf">
+        <div>
+            <h1>VALIDADOR DE CPF</h1>
+        </div>
+        <div >
+            <input type="text" id="cpf" placeholder="000.000.000-00" >
+        </div>
+        <div class = "button">
+            <button type="submit" onclick="validador()" >Validar CPF</button>
+        </div> 
+        <div id="resultado"></div>
     </div>
-    <div >
-        <input type="text" id="cpf" placeholder="00000000000" >
-    </div>
-    <div class = "button">
-        <button type="submit" onclick="validador()" >Validar CPF</button>
-    </div> 
-    <div id="resultado">Resultado</div>
 </body>
 <script src="index.js"></script>
 </html>

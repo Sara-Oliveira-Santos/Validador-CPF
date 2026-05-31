@@ -1,11 +1,12 @@
 body{
-  background: pink;   
+  background: #FFD4D3;   
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 input{
   background: rgb(252, 220, 225);
@@ -28,9 +29,9 @@ button {
 button:hover {
   background-color:rgba(209, 34, 34, 0.856);
   color: white;
+  /* padding: 12px; */
 }
 #resultado {
-  background-color: rgba(255, 95, 95, 0.267);
   padding: 10px;
   border-radius: 5px;
   margin-top: 20px;
@@ -44,4 +45,9 @@ button:hover {
 }
 .aviso {
   color: rgb(0, 0, 0);
+}
+#validador-cpf{
+  background-color: #ffb7b7;
+  padding: 25px;
+  border-radius: 5px;
 }
