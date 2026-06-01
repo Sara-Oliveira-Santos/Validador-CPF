@@ -15,6 +15,8 @@ input{
   padding: 10px;
   cursor:text;
   margin: 10px;
+  text-align: center;
+  font-size: 21px;        
 }
 button{
   background: rgb(224, 58, 86);
@@ -22,6 +24,7 @@ button{
   border-radius: 5px;
   padding: 10px;
   cursor:pointer;
+  color: rgba(0, 0, 0, 0.808)
 }
 button {
   transition-duration: 0.4s;
@@ -32,22 +35,28 @@ button:hover {
   /* padding: 12px; */
 }
 #resultado {
+  background: #FFD4D3;
   padding: 10px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 10px;
   font-size: 18px;
 }
-.valido { 
-  color: rgb(0, 94, 0);
+.valido{ 
+  color: rgba(0, 94, 0, 0.808);
 }
 .invalido {
-  color: rgb(104, 0, 0);
+  color: rgba(104, 0, 0, 0.808);
 }
 .aviso {
-  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.808);
 }
 #validador-cpf{
   background-color: #ffb7b7;
   padding: 25px;
   border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0 0 0 / 30%);
+  transition: 0.4s;
+}
+#validador-cpf:hover{
+  padding: 30px;
 }

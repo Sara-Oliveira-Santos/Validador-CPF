@@ -21,21 +21,21 @@ function obterCpfValido() {
         resultado.className = "aviso";
         return null;    
     }
-    // if(isNaN(cpf)){
-    //     resultado.innerText = "Apenas números.";
-    //     resultado.className = "aviso"; 
-    //     return null;
-    // }
-    if(cpf.length !== 11){
-        resultado.innerText = "O CPF precisa ter 11 digítos";
+    if(cpf === "11111111111" || cpf === "00000000000"){
+        resultado.innerText = "CPF INVÁLIDO";
+        resultado.className = "invalido"; 
+        return null;    
+    }
+    if(cpf.length > 11 ){
+        resultado.innerText = "O CPF tem exatamente 11 números.";
         resultado.className = "aviso"; 
         return null;
     }
-    // if (cpf.length !== 11 || isNaN(cpf)) {
-    //     resultado.innerText = "O CPF precisa ter apenas números \n e exatamente 11 dígitos.";
-    //     resultado.className = "aviso"; 
-    //     return null;
-    // }
+    if(cpf.length < 11 ){
+        resultado.innerText = "O CPF incompleto.";
+        resultado.className = "aviso"; 
+        return null;
+    }
     return cpf;
 }
 
