@@ -17,7 +17,7 @@ function obterCpfValido() {
     cpf = cpf.replace(/\D/g, "");
 
     if (cpf === ''){
-        resultado.innerText = "Sem números para validar.";
+        resultado.innerText = "Sem números para validar";
         resultado.className = "aviso";
         return null;    
     }
@@ -27,12 +27,12 @@ function obterCpfValido() {
         return null;    
     }
     if(cpf.length > 11 ){
-        resultado.innerText = "O CPF tem exatamente 11 números.";
+        resultado.innerText = "O CPF tem exatamente 11 números";
         resultado.className = "aviso"; 
         return null;
     }
     if(cpf.length < 11 ){
-        resultado.innerText = "O CPF incompleto.";
+        resultado.innerText = "O CPF incompleto";
         resultado.className = "aviso"; 
         return null;
     }
